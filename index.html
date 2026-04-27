@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FYTCH STORE</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- INTRO -->
+<div id="intro">
+  <img src="assets/logo.png" class="intro-logo">
+</div>
+
+<header>
+  <h1 class="logo">FYTCH</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="catalog.html">Catalog</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="cart-icon" onclick="toggleCart()">🛒</div>
+</header>
+
+<div class="banner">
+  <p>FREE SHIPPING • COD AVAILABLE • LIMITED STOCK</p>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+
+  <div class="hero-slide active">
+    <img src="assets/hero1.jpg">
+    <div class="hero-content">
+      <h1>NEW DROP</h1>
+      <p>Clothes without excess. Only style.</p>
+      <button onclick="location.href='catalog.html'">Shop Now</button>
+    </div>
+  </div>
+
+  <div class="hero-slide">
+    <img src="assets/hero2.jpg">
+    <div class="hero-content">
+      <h1>LIMITED COLLECTION</h1>
+      <p>Premium quality. Worldwide shipping.</p>
+      <button onclick="location.href='catalog.html'">Explore</button>
+    </div>
+  </div>
+
+  <div class="progress-bar"></div>
+
+  <div class="hero-dots">
+    <span onclick="goSlide(0)" class="active"></span>
+    <span onclick="goSlide(1)"></span>
+  </div>
+
+</section>
+
+<!-- PRODUCTS -->
+<section class="products">
+  <h2>Featured Products</h2>
+
+  <div class="grid">
+
+    <div class="product">
+      <a href="product.html">
+        <img src="assets/hoodie.jpg">
+      </a>
+      <h3>Black Hoodie</h3>
+      <p>₹899</p>
+      <button class="btn">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <a href="product.html">
+        <img src="assets/tshirt.jpg">
+      </a>
+      <h3>Oversized Tee</h3>
+      <p>₹699</p>
+      <button class="btn">Add to Cart</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- CART -->
+<div id="cartOverlay"></div>
+
+<div id="cartDrawer">
+  <div class="cart-header">
+    <h2>Your Cart</h2>
+    <span onclick="toggleCart()">✖</span>
+  </div>
+
+  <div id="cartItems"></div>
+
+  <div class="cart-footer">
+    <h3>Total: ₹<span id="cartTotal">0</span></h3>
+    <button onclick="goToCheckout()" class="checkout-btn">Checkout</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
