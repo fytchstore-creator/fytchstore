@@ -1,0 +1,155 @@
+body {
+  margin: 0;
+  background: #0a0a0a;
+  color: white;
+  font-family: 'Inter', sans-serif;
+}
+
+/* INTRO */
+#intro {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeOut 2s forwards 2s;
+}
+
+.intro-logo {
+  width: 280px;
+  animation: zoom 1.5s ease;
+}
+
+@keyframes zoom {
+  from {transform: scale(0.5); opacity:0;}
+  to {transform: scale(1); opacity:1;}
+}
+
+@keyframes fadeOut {
+  to {opacity:0; visibility:hidden;}
+}
+
+/* NAV */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.logo {
+  font-family: 'UnifrakturCook', cursive;
+}
+
+.cart-icon {
+  cursor: pointer;
+}
+
+/* BANNER */
+.banner {
+  background: #111;
+  overflow: hidden;
+}
+
+.banner p {
+  white-space: nowrap;
+  animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+  from {transform: translateX(100%);}
+  to {transform: translateX(-100%);}
+}
+
+/* HERO */
+.hero { position: relative; overflow: hidden; }
+
+.slides {
+  display: flex;
+  transition: 0.5s;
+}
+
+.slides img {
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+}
+
+.hero-text {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+}
+
+.hero-text h2 { font-size: 60px; }
+
+.hero-text button {
+  padding: 10px 20px;
+  border: none;
+  background: white;
+}
+
+/* GRID */
+.grid {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card, .product {
+  background: #111;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.card img, .product img { width: 100%; }
+
+.card:hover, .product:hover {
+  transform: scale(1.05);
+}
+
+/* BUTTON */
+.btn {
+  padding: 10px;
+  background: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* CART */
+#cartOverlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: none;
+}
+
+#cartDrawer {
+  position: fixed;
+  right: -400px;
+  top: 0;
+  width: 350px;
+  height: 100%;
+  background: #111;
+  padding: 20px;
+  transition: 0.4s;
+}
+
+#cartDrawer.active { right: 0; }
+#cartOverlay.active { display: block; }
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.checkout-btn {
+  width: 100%;
+  padding: 10px;
+  background: white;
+  border: none;
+}
